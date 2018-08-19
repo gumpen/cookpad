@@ -10,7 +10,7 @@
             .recipe_author__link_setting_delete
               = link_to "印刷", "#"
               |
-              = link_to "削除", "#"
+              = link_to "削除"
             -# recipe内の入力する部分(画像、材料、キャッチコピー)
           .recipe-main
             .recipe-title
@@ -44,7 +44,7 @@
             .sk-center
             -# 料理ステップ
             #cooking-steps.clearfix
-              = render "step", f: f
+              = render "step-new", f: f
               -# コツ、レシピの生い立ち
             .memo_and_history.clearfix
               .memo_wrapper

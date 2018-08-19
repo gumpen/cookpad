@@ -40,6 +40,7 @@ namespace :deploy do
       upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
     end
   end
+
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
 end

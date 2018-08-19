@@ -1,0 +1,16 @@
+- if current_user
+  - if recipe.register_to_myfolder?(current_user)
+    - @myfolder = recipe.myfolders.find_by(user_id: current_user.id)
+    = form_for recipe.myfolders.find_by(user_id: current_user.id), method: :delete, remote: true do |f|
+      = hidden_field_tag :myfolder_id, @myfolder.id
+      = button_tag class: "myfolder_btn unregister" do
+        = link_to "", class: "myfolder_text" do
+          = fa_icon "trash-alt"
+          %span MYフォルダから削除
+  - else
+    = form_for recipe.myfolders.build,remote: true do |f|
+      = hidden_field_tag :recipe_id, recipe.id
+      = button_tag class: "myfolder_btn register" do
+        = link_to "", class: "myfolder_text" do
+          = fa_icon "bookmark"
+          %span MYフォルダに保存

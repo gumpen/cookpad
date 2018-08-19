@@ -1,0 +1,149 @@
+.main-show
+  .contents.clearfix
+    .contents__left.clearfix
+      -# レシピ詳細部分
+      .recipe-show
+        .recipe__save-button.myfolder
+          = render "myfolder-button", recipe: @recipe
+        .recipe__title
+          %h1.recipe-title
+            = @recipe.title
+            -# キャッチコピー、材料、計算
+        #photo-summary-ingredients.clearfix
+          .main-photo
+            = image_tag(@recipe.image)
+            画像
+          .desc-and-ingredients
+            -# レシピのキャッチコピー
+            .summary
+              .description_text
+                = @recipe.catch_copy
+              .recipe_author_info_link
+                = image_tag "#", size: "22x22", class: "author_icon"
+                = link_to "name", class: "recipe_author_name"
+            .ingredients_wrapper
+              .ingredients-title
+                %h3.servings_title
+                  .content
+                    %span
+                      材料
+                    %span.serving_for
+                      （１～２人分）
+              #ingredients_list
+                -# 複数投稿してから実装する
+                = render "ingredient", ingredients: @ingredients
+              .option-calculation
+                = image_tag "icon_ps_small.png", size: "13x14", class: "ps_icon"
+                = link_to "カロリー・塩分を計算", "#", class: "calculate-nutrition"
+        .sk_product_recipe_promotion
+        #steps.clearfix
+          = render "step-show", flows: @flows
+        #memo_and_history.clearfix
+          .memo_wrapper
+            %h3
+              コツ・ポイント
+            .text_content#advice
+              = @recipe.tips
+          .history_wrapper
+            %h3
+              このレシピの生い立ち
+            .text_content#history
+              = @recipe.background
+        .sk_product_recipe_regular_user
+        .meta_data_wrapper
+          .recipe_id_and_published_date
+            %span.recipe_id
+              レシピID :
+              = @recipe.id
+            %span.published_date
+              公開日 :
+              = simple_time(@recipe.created_at)
+            %span
+              更新日 :
+              = simple_time(@recipe.updated_at)
+        .recipe_share_tools_wrapper
+          %ul.tools_list.clearfix
+            %li.save-myfolder
+              .myfolder_recipe_link
+                = image_tag "folder_in_symbolfont.png", class: "folder_in_symbolfont"
+                = link_to "レシピを保存", "#"
+            %li.print_icon
+              %i.fa.fa-print
+              = link_to "印刷する", "#"
+            %li.email-icon
+              %i.fa.fa-envelope
+              = link_to "メールする", "#"
+            %li.keitai-icon
+              %i.fa.fa-mobile
+              = link_to "携帯に送る", "#"
+            %li.recipe_share
+              %i.fa.fa-angle-down
+              = link_to "レシピを共有", "#"
+      -# つくれぽ、コメント
+      #tsukurepo-and-comment
+        %ul.menu_tab
+          %li#tsukurepo_tab
+            = link_to "つくれぽ", "#"
+            %span.count
+              (205件)
+          %li#comment_tab
+            = link_to "コメント", "#"
+            %span.count
+              (0件)
+        .tsukurepo_and_comment_wrapper
+          .tsukurepo_container
+            .tsukurepo_title
+              %h2.title
+                みんなのつくりましたフォトレポート「つくれぽ」
+              .matter_right
+                %span.tsukurepo_count 205
+                件
+                %span.tsukurepo_uu_count (189人)
+            #tsukurepo-list.clearfix
+              = render "tsukurepo"
+            #more_tsukurepos.center
+              = link_to "もっと見る(238件)"
+            .tsukurepo-post
+              .tsukurepo_content_for
+                = link_to "", class: "tsukurepo_button" do
+                  = fa_icon "edit"
+                  つくれぽを送る
+        #related_link_wrapper
+          .related
+            .user_kondates_wrapper
+              %h5.title_border
+                このレシピを使った献立
+              #user_kondates.clearfix
+                = render "kondate"
+              %h5.title_border
+                似たレシピをさがす
+              %ul.related_keywords
+                = render "similar-recipe"
+    .contents__right.clearfix
+      .side_banner_wrapper 広告
+      .goiken_section
+        .goiken_box
+          .goiken_title
+            クックパッドへのご意見をお聞かせください
+          .goiken_content
+            .new_goiken
+              %input#opinion_type_default{type:"radio",checked: "checked",name:"opinion_type"}
+              %label{for:"opinion_type_default"}
+                サービスへのご意見・ご要望
+              %br
+              %input#opinion_type_bug{type:"radio",name:"opinion_type"}
+              %label{for:"opinion_type_bug"}
+                機能の不具合
+              %br
+              %input#opinion_type_report{type:"radio",name:"opinion_type"}
+              %label{for:"opinion_type_report"}
+                レシピやつくれぽで気付いた点の報告
+            %textarea
+            .opinion_submit_wrapper
+              %input{type:"submit",value:"クックパッドに意見を送る", }
+        .inq_box
+          %p.inq_title お困りの方はこちら
+          %p.link_to_inq
+            = link_to "ヘルプ・お問い合わせ", "#"
+      .side_banner_wrapper 広告
+      .side_banner_wrapper 広告

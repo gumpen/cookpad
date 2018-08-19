@@ -1,0 +1,11 @@
+- @flows.each.with_index(1) do |flow, number|
+  .step
+    .step__head
+      %h3
+        = number
+    .instruction
+      .instruction__photo
+        .image
+          = flow.image
+      .instruction__text
+        = flow.text

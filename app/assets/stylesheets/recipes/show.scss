@@ -1,0 +1,558 @@
+.main-show {
+  width: 100vw;
+  background: #f7f3e8;
+  color: #999;
+  font-size: 114.5%;
+  .contents {
+    height: auto;
+    width: 970px;
+    margin: 0 auto;
+    padding-right: 170px;
+    &__left {
+      background-color: #ffffff;
+      width: 650px;
+      height: auto;
+      float: left;
+      border: 1px solid #ded5c0;
+      border-radius: 5px;
+    }
+    &__right {
+      height: auto;
+      width: 300px;
+      float: right;
+    }
+  }
+}
+
+// レシピのキャッチコピー
+.recipe-show {
+  height: auto;
+  padding: 12px 20px 10px 20px;
+  position: relative;
+  .recipe__save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    .myfolder_text {
+      border: 1px solid #cdc8ae;
+      height: 28px;
+      border-radius: 3px;
+      background: linear-gradient(to bottom, #fefefe, #f0ece2);
+      padding: 7px;
+      font-weight: bolder;
+    }
+  }
+  .recipe__title {
+    margin-bottom: 10px;
+    width: 480px;
+    color: #889b00;
+    h1 {
+      font-size: 150%;
+      font-weight: bold;
+      letter-spacing: -0.8px;
+    }
+  }
+  .main-photo {
+    width: 280px;
+    margin-right: 10px;
+    float: left;
+    height: 420px;
+    background-color: #f7f3e8;
+  }
+  .desc-and-ingredients{
+    width: 310px;
+    float: right;
+    margin-bottom: 10px;
+  }
+  .summary{
+    font-size: 108%;
+    margin-bottom: 15px;
+  }
+  .description_text {
+    color: #3c3c3c;
+    word-wrap: break-word;
+  }
+  .recipe_author_info_link {
+    text-align: right;
+    padding-top: 4px;
+    .author_icon {
+      vertical-align: middle;
+    }
+    .recipe_author_name {
+    }
+  }
+}
+
+// レシピの材料
+.ingredients_wrapper {
+  width: 310px;
+  .ingredients-title {
+    border-bottom: 1px solid #E5E5E5;
+    h3 {
+      color: #E0D7C1;
+      font-size: 118%;
+      font-weight: bold;
+      margin-bottom: 5px;
+      .content {
+        width: 265px;
+        .serving_for {
+          font-size: 12px;
+          color: #4c4c4c;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  #ingredients_list {
+    color: #4C4C4C;
+    font-size: 108%;
+    .ingredient {
+      border-bottom: 1px solid #E5E5E5;
+      padding: 1px 5px;
+      height: 22px;
+      overflow:hidden;
+      &__name {
+        display: inline;
+        float: left;
+        height: 22px;
+        span {
+          font-size: 90%;
+        }
+      }
+      &__amount {
+        display: inline;
+        float:right;
+        margin-left: 10px;
+        font-size: 80%;
+      }
+    }
+  }
+  .option-calculation {
+    padding: 5px 0;
+    float: right;
+    .calculate-nutrition {
+      border-radius: 4px;
+      background: #f3f3f3;
+      color: #666666;
+      font-size: 10px;
+      padding: 3px 5px;
+      text-decoration: none;
+    }
+    .ps_icon {
+      vertical-align: middle;
+    }
+  }
+}
+
+.sk_product_recipe_promotion {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.sk_product_recipe_regular_user {
+  margin-top: 10px;
+}
+
+// レシピのstep
+#steps {
+  padding-bottom: 15px;
+  .step {
+    float: left;
+    width: 136px;
+    margin-right: 16.5px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+    &__head {
+      margin-bottom: 2px;
+      h3 {
+        font-size: 120%;
+        font-weight: bold;
+        color: #E0D7C1;
+        margin-bottom: 5px;
+      }
+    }
+    .instruction {
+      &__photo {
+        .image {
+          width: 136px;
+          margin-bottom: 2px;
+        }
+      }
+      &__text {
+        color: #3c3c3c;
+        font-size: 90%;
+      }
+    }
+  }
+}
+
+// コツ、生い立ち
+#memo_and_history {
+  h3 {
+    font-weight: bold;
+    color: #E0D7C1;
+    margin-bottom: 5px;
+  }
+  .text_content {
+    font-size: 80%;
+    word-wrap: break-word;
+    color: #3c3c3c;
+  }
+  .memo_wrapper {
+    margin-right: 15px;
+    padding-right: 11px;
+    border-right: 1px solid #f5f5f5;
+    float: left;
+    width: 290px;
+  }
+  .history_wrapper {
+    float: left;
+    width: 290px;
+  }
+}
+
+// レシピ共有ツール
+.recipe_share_tools_wrapper{
+  padding: 15px 0px;
+  ul {
+    list-style: none;
+    font-size: 13px;
+    width: 620px;
+    margin: 0 auto;
+    li{
+      width: 120px;
+      line-height: 40px;
+      float: left;
+      text-align: center;
+      vertical-align: middle;
+      border-right: 1px solid #e3dcca;
+      .myfolder_recipe_link {
+        display: inline;
+        .folder_in_symbolfont {
+          width: 24px;
+        }
+      }
+      .fa-print {
+        color: #e3dcca;
+        font-size: 24px;
+      }
+      .fa-envelope {
+        color: #e3dcca;
+        font-size: 22px;
+      }
+      .fa-mobile {
+        color: #e3dcca;
+        font-size: 25px;
+      }
+      .fa-angle-down {
+        color: #e3dcca;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+// つくれぽ、コメント
+#tsukurepo-and-comment {
+  padding-top: 15px;
+  .menu_tab {
+    padding-left: 20px;
+    height: 29px;
+    border-bottom: 1px solid #d8d4c5;
+    li {
+      border-bottom: 1px solid #fffdef;
+      width: 150px;
+      font-weight: bold;
+      border: 1px solid #d8d4c5;
+      height: 28px;
+      float: left;
+      text-align: center;
+      margin-right: 10px;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+    }
+    li#tsukurepo_tab {
+      background-color: #fffdef;
+    }
+    li#comment_tab {
+      background-color: #f3f0e2;
+    }
+    a {
+      text-decoration: none;
+    }
+    span {
+      text-decoration: none;
+      line-height: 30px;
+      font-weight: normal;
+      font-size: 80%;
+      color: #999999;
+    }
+  }
+  .tsukurepo_and_comment_wrapper {
+    background: #fffdef;
+    height: auto;
+    padding: 24px;
+    padding-top: 15px;
+    border-bottom: 1px solid #e3dcca;
+    .tsukurepo_title {
+      width: 596px;
+      margin-bottom: 10px;
+      .title {
+        padding: 0px;
+        margin: 0px;
+        font-size: 90%;
+        display: inline-block;
+      }
+      .matter_right {
+        display: inline-block;
+        color: #4d2200;
+        float:right;
+        .tsukurepo_count {
+          font-size: 110%;
+          font-weight: bold;
+        }
+        .tsukurepo_uu_count {
+          color: #999;
+        }
+      }
+    }
+    #tsukurepo-list {
+      .tsukurepo-wrapper {
+        margin-bottom: 12px;
+        margin-right: 14px;
+        width: 136px;
+        float: left;
+        .tsukurepo {
+          border-radius: 3px;
+          border: 1px solid #e3dcca;
+          box-shadow: 0 1px 1px #cccccc;
+          width: 136px;
+          font: 14px / 1.4 "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", arial, helvetica, clean, sans-serif;
+          color: #3c3c3c;
+          .tsukurepo-inner {
+            margin: 3px 5px 8px;
+            background: #fff;
+            .tsukurepo_info {
+              position: relative;
+              width: 124px;
+              margin-bottom: 3px;
+              text-align: left;
+              .date {
+                color: #999999;
+                font-size: 10px;
+              }
+            }
+            .image {
+              width: 130px;
+              height: 130px;
+              margin: 0 -2px 8px;
+              .tsukurepo-photo {
+              }
+            }
+            .message {
+              font-size: 12px;
+              line-height: 1.3em;
+              margin-bottom: 5px;
+              margin-top: 5px;
+              word-wrap: break-word;
+              color: #49441e;
+            }
+            .tsukurepo-author {
+              font-size: 85%;
+              text-align: right;
+              word-break: break-all;
+              margin-bottom: 5px;
+              .author_icon {
+                height: 16px;
+                width: 16px;
+                vertical-align: middle;
+              }
+              .author {
+              }
+            }
+          }
+        }
+        p.comment {
+          color: #3c3c3c;
+          margin-top: 5px;
+          font-size: 12px;
+          line-height: 1.3em;
+          word-wrap: break-word;
+        }
+      }
+    }
+    .center {
+      font-size: 119%;
+      text-align: center;
+    }
+    .tsukurepo-post {
+      text-align: center;
+      margin: 20px 0 5px;
+      .tsukurepo_content_for {
+        .tsukurepo_button {
+          color: #3c3c3c;
+          padding: 6px 12px;
+          margin: 6px 0;
+          min-width: 100px;
+          border-radius: 3px;
+          border: 1px solid #cccccc;
+          background: linear-gradient(to bottom, #ffffff, #ececec);
+          display: inline-block;
+          text-decoration: none;
+          text-shadow: 0 1px 0 #fff;
+          font-size: 86%;
+        }
+      }
+    }
+  }
+}
+
+// このレシピを作った献立、似たレシピを探す
+#related_link_wrapper {
+  margin-bottom: 6px;
+  .related{
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    font-size: 87.5%;
+    .user_kondates_wrapper {
+      .title_border {
+        margin-top: 10px;
+        font-size: 14px;
+        border-bottom: 1px solid #e3dcca;
+        padding: 0 0 3px 0;
+        margin: 10px 0;
+        font-weight: bold;
+        position: relative;
+        color: #4d2200;
+      }
+      #user_kondates {
+        margin-bottom: 20px;
+        margin-left: 5px;
+        .kondate_recipe_show_view {
+          margin: 5px;
+          float: left;
+          width: 140px;
+          text-align: center;
+          .kondate_image {
+            padding: 4px;
+            border: 1px solid #cccccc;
+            border-right: 1px solid #999999;
+            border-bottom: 1px solid #999999;
+          }
+          .kondate_title {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #845f4b;
+            .kondate_recipe_count{
+              font-weight: normal;
+              font-size: 12px;
+              color: #999999;
+            }
+          }
+          .kondate_author {
+            font-size: 86%;
+          }
+        }
+      }
+      .related_keywords {
+        font-size: 93%;
+        list-style: none;
+        text-align: center;
+        .similar-recipe {
+          background-position: 0px 3px;
+          padding-left: 12px;
+          color: #330000;
+          .fa-caret-right {
+          }
+          .track_hakari {
+            color: #330000;
+          }
+          .gray {
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+}
+
+// right-contents
+.side_banner_wrapper {
+  margin-bottom: 20px;
+  height: 250px;
+  background-color: #eaeaea;
+}
+.goiken_section {
+  text-align: center;
+  font-size: 87.5%;
+  .goiken_box {
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 15px;
+    border: 1px solid #e3dcca;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+    background: #ede7da;
+    .goiken_title {
+      color: #4d2200;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 18px;
+      margin-bottom: -2px;
+    }
+    .goiken_content {
+      padding: 10px 10px 0;
+      .new_goiken {
+        font-size: 87.5%;
+        color: #3c3c3c;
+        line-height: 26px;
+        margin-bottom: 12px;
+      }
+    }
+    textarea {
+      font-size: 14px;
+      padding: 3px;
+      height: 120px;
+      width: 240px;
+      margin: 0 5px 0 0;
+      box-shadow: inset 1px 1px 4px #e6e6e6;
+      border-radius: 3px;
+      box-sizing: border-box;
+      border: 1px solid #cccccc;
+      vertical-align: middle;
+      display: inline-block;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+  }
+  .inq_box {
+    border-radius: 5px;
+    padding: 12px 10px 8px 10px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+    background: #ede7da;
+    border: 1px solid #e3dcca;
+    margin-bottom: 20px;
+    .inq_title {
+      font-size: 93%;
+      margin-bottom: 10px;
+      color: #4d2200;
+      font-weight: bold;
+    }
+  }
+  .link_to_inq {
+    margin-bottom: 10px;
+    color: #330000;
+    a {
+      font-size: 78%;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 1px solid #cccccc;
+      background: #ffffff;
+      padding: 6px 12px;
+      min-width: 100px;
+      display: inline-block;
+      color: #330000;
+    }
+  }
+}
+
