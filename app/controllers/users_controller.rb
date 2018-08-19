@@ -8,10 +8,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      respond_to do |format|
-        format.html { redirect_to edit_user_path(@user) }
-        format.json
-      end
+      redirect_to edit_user_path(@user)
     else
       render :edit
     end
@@ -28,7 +25,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :avatar)
+    params.require(:user).permit(:name)
   end
 
   def set_user

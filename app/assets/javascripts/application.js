@@ -17,4 +17,3 @@
 //= require jquery
 //= require_tree .
 //= require font_awesome5
-//= require jquery.remotipart
